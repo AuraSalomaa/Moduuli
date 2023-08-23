@@ -1,3 +1,5 @@
+import math
+import random
 name = input("Mikä on nimesi?")
 circle = int(input("Syötä ympyrän säde:"))
 width = int(input("Syötä leveys:"))
@@ -8,17 +10,21 @@ c = int(input("anna kolmas numero:"))
 luodit = float(input("anna luodit:"))
 naulat = int(input("anna naulat:"))
 leiviskat = int(input("anna leiviskat:"))
-CircleArea = circle * circle * 3.14
+kolmenumero_koodi = random.randint(1,9)
+nelinumero_koodi  = random.randint(1,6)
+CircleArea = circle * circle * math.pi
 squareArea = width * hight
 squareAround = (width * width) + (hight + hight)
 keskiarvo = a + b + c /3
 summa = a + b + c
 tulo = a * b * c
 sievennetty = (keskiarvo)
-luoti = 13.33
+luoti = 13.30
 naula = 32 * luoti
 leiviska = naula * 20
 lasku = (leiviska * leiviskat) + (naula * naulat) + (luoti * luodit)
-print(round(lasku, 2))
-print(f"Terve {name}!. {CircleArea}. {squareArea} ja {squareAround}.{sievennetty} {summa} {tulo}. ")
+osa = '{:,}'.format(lasku)
+osat = osa.split(",",1 )
+print(kolmenumero_koodi,kolmenumero_koodi,kolmenumero_koodi)
+print(f"Terve {name}!. {CircleArea}. {squareArea} ja {squareAround}.{sievennetty} {summa} {tulo}.Kilogrammaa {osat[0]}, grammaa {osat[1]} ")
 
