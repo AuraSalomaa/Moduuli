@@ -20,5 +20,5 @@ naula = 32 * luoti
 leiviska = naula * 20
 lasku = (leiviska * leiviskat) + (naula * naulat) + (luoti * luodit)
 print(round(lasku, 2))
-#print(f"Terve {name}!. {CircleArea}. {squareArea} ja {squareAround}.{sievennetty} {summa} {tulo}. ")
+print(f"Terve {name}!. {CircleArea}. {squareArea} ja {squareAround}.{sievennetty} {summa} {tulo}. ")
 
