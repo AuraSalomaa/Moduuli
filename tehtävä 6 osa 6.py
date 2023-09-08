@@ -4,7 +4,7 @@ import math
 
 def pizza_laskuri(mitta_cm, hinta_e):
     laskenta = ((math.pi * mitta_cm) / 100) / 100
-    neliohinta = laskenta/hinta_e
+    neliohinta = hinta_e / laskenta
     return neliohinta
 
 
@@ -17,6 +17,6 @@ toka_hinta = float(input("Syötä toisen pitsan hinta euroina: "))
 toinen = pizza_laskuri(toka_mitta, toka_hinta)
 
 if ensimmainen < toinen:
-    print("ensimmäisellä pizzalla on parempi yksikköhinta")
+    print("ensimmäisellä pizzalla on parempi yksikkö hinta")
 else:
-    print("Toisella pizzalla on parempi yksikköhinta ")
+    print("Toisella pizzalla on parempi yksikkö hinta ")
