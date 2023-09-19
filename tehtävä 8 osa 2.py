@@ -10,8 +10,8 @@ yhteys = mariadb.connect(
     autocommit=True
 )
 
-maakoodi = input("Syötä maakoodi:" )
-sql = f'SELECT type, count(0) FROM airport WHERE airport.iso_country = "{maakoodi}" Group by type'
+maakoodi = input("Syötä maakoodi:")
+sql = f'SELECT country.name, type, count(0) FROM airport,country WHERE country.iso_country = airport.iso_country and airport.iso_country = "{maakoodi}" Group by type'
 yhteys_sql = yhteys.cursor()
 yhteys_sql.execute(sql)
 tulos = yhteys_sql.fetchall()
