@@ -1,16 +1,37 @@
 class Auto:
-    def __init__(self, rekisteri, huippunopeus, nopeus, ajomaara, kiihdyta):
+
+
+    def __init__(self, rekisteri, huippunopeus, nopeus, ajomaara):
         self.rekisteri = rekisteri
         self.huippunopeus = huippunopeus
         self.nopeus = nopeus
         self.ajomaara = ajomaara
-        self.kiihdyta = kiihdyta
+
+    def kiihdyttaa(self, kiihdytys: int):
+        muutos = self.nopeus + kiihdytys
+        return muutos
 
 
-    def self.nopeus:
 
-auto1 = Auto("ABC-123", 142, 0, 0, 40)
-auto1.nopeus += auto1.kiihdyta
 
+
+
+
+
+
+
+auto1 = Auto("ABC-123", 160, 0, 0)
 print(f"rekisteriosoite on {auto1.rekisteri} ja huippunopeus on {auto1.huippunopeus} km/h")
-print(f"nopeus kiihtyi {auto1.kiihdyta} ja nopeus on {auto1.nopeus}")
+nosto1 = auto1.kiihdyttaa(30)
+nosto2 = auto1.kiihdyttaa(70)
+nosto3 = auto1.kiihdyttaa(50)
+nopeus_nyt = nosto1 + nosto2 + nosto3
+uusin_nopeus = auto1.kiihdyttaa(-200)
+if nopeus_nyt > auto1.huippunopeus:
+    nopeus_nyt = auto1.huippunopeus
+elif uusin_nopeus < 0:
+    uusin_nopeus = 0
+
+print(f"nykyinen nopeus on {nopeus_nyt}km/h ja jarrutuksen jälkeen nopeus on {uusin_nopeus}km/h")
+
+
