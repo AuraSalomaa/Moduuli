@@ -17,7 +17,6 @@ class Hissi:
         return alaspain
 
 
-
 h = Hissi(1,10)
 
 
