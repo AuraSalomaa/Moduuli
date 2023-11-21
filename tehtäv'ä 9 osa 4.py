@@ -21,11 +21,13 @@ class Auto:
         print(f"{ajettu_matka:.0f} km")
         return
 
+
 kerrat = 0
 osallistujat = []
 for i in range(10):
     kerrat += 1
-    Rekisteri = f"ABC-{kerrat}"
+    numero = str(kerrat)
+    Rekisteri = f"ABC-" + numero
     Suurin_nopeus = random.randint(100, 200)
     auto1 = Auto(Rekisteri, Suurin_nopeus, 0, 0)
     osallistujat.append(auto1)
